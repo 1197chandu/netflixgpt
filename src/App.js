@@ -1,10 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Body from "./components/Body";
 
 function App() {
-  return (
-    <div className="App m-4 p-4 text-bold text-3xl">Let build NetflixGPT</div>
-  );
+  return <Body />;
 }
 
 export default App;
