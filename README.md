@@ -96,3 +96,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 -VideoTitle
 -VideoBackground
 -Secondarycontainer
+-Build mivie list
+-build movie card
+-Img cdn url
+-custom hook to fetch popular movies
