@@ -50,18 +50,22 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
-      <img className="w-44" src={NETFLIX_LOGO} alt="netflix logo" />
+    <div className="flex flex-col md:flex-row justify-between absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10">
+      <img
+        className="w-44 mx-auto md:mx-0"
+        src={NETFLIX_LOGO}
+        alt="netflix logo"
+      />
       {user && (
-        <div className="flex">
+        <div className="flex justify-between">
           <button
             className="bg-red-500 px-4 py-2 m-4 rounded text-white"
             onClick={handleToggleGpt}
           >
-            {showGptSearch ? "Home page" : "GPT Search"}
+            {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
           <img className="w-12 h-12 m-2" src={user.photoURL} alt="Logo" />
-          <span className="text-white font-bold m-2 p-2">
+          <span className="text-white font-bold m-2 p-2 hidden md:inline-block">
             {user.displayName}
           </span>
           <span

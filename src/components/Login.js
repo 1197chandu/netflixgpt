@@ -93,7 +93,11 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <img className="absolute" src={BG_IMG} alt="Bg img" />
+      <img
+        className="absolute h-screen object-cover md:h-auto"
+        src={BG_IMG}
+        alt="Bg img"
+      />
       <div className="absolute bg-gray-950 w-[22rem] bg-opacity-80 rounded-md mx-auto my-36 right-0 left-0 p-3">
         <h1 className="font-bold text-2xl text-white mx-4">
           {isSignInForm ? "Sign In" : "Sign up"}

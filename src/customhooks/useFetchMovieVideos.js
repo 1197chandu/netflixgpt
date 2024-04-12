@@ -7,10 +7,6 @@ const useFetchMovieVideos = (id) => {
   const dispatch = useDispatch();
   const trailerVideo = useSelector((store) => store.movie.trailerVideo);
 
-  useEffect(() => {
-    !trailerVideo && getMovieVideos();
-  }, []);
-
   const getMovieVideos = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/" + id + "/videos?language=en-US",
@@ -22,6 +18,10 @@ const useFetchMovieVideos = (id) => {
     const trailer = fiteredData.length ? fiteredData[0] : json.results[0];
     dispatch(addTrailer(trailer));
   };
+
+  useEffect(() => {
+    !trailerVideo && getMovieVideos();
+  }, []);
 };
 
 export default useFetchMovieVideos;
